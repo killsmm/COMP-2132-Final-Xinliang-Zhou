@@ -1,0 +1,125 @@
+/**
+ * Copyright 2023 zhouxinliang
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+@font-face {
+    font-family: pFont;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: headFont;
+    src: url(../fonts/JosefinSans-SemiBold.ttf);
+}
+
+body {
+    background-color: #838383;
+    font-family: headFont;
+    padding: 10px;
+}
+
+div {
+    margin: 10px;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+div.battleground {
+    background: radial-gradient(white, black);
+    flex: 1 1 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.block {
+    /* background-color:blue; */
+    flex: 1 1 500px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+div.mat {
+    background-color: white;
+    flex: 0 1 auto;
+    width: 100%;
+    display: flex;
+}
+
+div.control {
+    flex: 0 1 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+div.score {
+    background-color: beige;
+    flex: 0 1 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin-inline: 100px;
+}
+
+
+button:hover {
+    cursor: pointer;
+    background-color: #3d3d3d;
+    color: #fff;
+}
+
+button,
+button:active {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #3d3d3d;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    min-width: 100px;
+}
+
+img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#leftImg {
+    transform: scaleX(-1);
+}
+
+#result {
+    display: none;
+}

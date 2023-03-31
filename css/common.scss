@@ -1,0 +1,163 @@
+@font-face {
+    font-family: pFont;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: headFont;
+    src: url(../fonts/JosefinSans-SemiBold.ttf);
+}
+
+body{
+    background-color: #838383;
+    font-family: headFont;
+    padding:10px;
+}
+
+h1{
+    margin-inline: 100px;
+}
+
+div.block {
+    /* background-color:blue; */
+    flex: 1 1 500px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#rules {
+    //centering
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#rules_text {
+    position: absolute;
+    margin: auto;
+    top:55%;
+    padding: 10px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 500px;
+    display: none;
+}
+
+#add_score_left, #add_score_right {
+    display: none;
+}
+
+div{
+    margin:10px;
+    img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+    
+    &.container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &.score{
+        background-color: beige;
+        flex: 0 1 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &.battleground {
+        background: radial-gradient(white, black);
+        flex: 1 1 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+
+
+        div.control{
+            flex: 0 1 30px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+
+
+        h1{
+            margin-inline: 100px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: #3d3d3d;
+            color: #fff;
+        }
+
+        button, button:active{
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #3d3d3d;
+            background-color: #fff;
+            border-radius: 4px;
+            border: 2px solid #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            min-width: 100px;
+        }
+
+        img#leftImg{
+            transform: scaleX(-1);
+        }
+
+        img#result{
+            display: none;
+        }
+    }
+
+    &.mat {
+        background-color: white;
+        flex: 0 1 auto;
+        width: 100%;
+        display: flex;
+
+        div.block {
+
+
+            &:first-child {
+                img#leftDice1 {
+                    animation: roll 1s infinite;
+                }
+
+                img#leftDice2 {
+                    animation: roll 1s infinite reverse;
+                }
+            }
+
+            &:last-child {
+                img#rightDice1 {
+                    animation: roll 1s infinite;
+                }
+
+                img#rightDice2 {
+                    animation: roll 1s infinite reverse;
+                }
+            }
+        }
+    }
+}
